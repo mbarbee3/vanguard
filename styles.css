@@ -76,6 +76,11 @@ header {
     color: var(--white);
 }
 
+header h2 {
+    visibility: hidden;
+    font-size: 1px;;
+}
+
 #about {
     color: var(--white);
 }
