@@ -76,8 +76,8 @@ header {
     color: var(--white);
 }
 
-header a {
-    text-decoration: none;
+#about {
+    color: var(--white);
 }
 
 #results {
