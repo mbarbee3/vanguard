@@ -71,28 +71,171 @@ body {
     font-family: var(--font);
 }
 
+h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 25px;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 0.9em;
+    padding: 10px 20px;
+}
+
 header {
     background: var(--black);
-    color: var(--white);
+    font-weight: bold;
+    color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 10px;
+    box-shadow: 0 5px 10px var(--blue);
 }
 
 header h2 {
     visibility: hidden;
-    font-size: 1px;;
+    font-size: 1px;
+}
+
+header ul {
+    margin: 10px;
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    max-height: 0;
+    width: auto;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav a {
+    display: block;
+    padding: 20px 40px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+header nav a:hover {
+    background: var(--blue);
+    color: var(--black);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+header label {
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    top: 50px;
+    right: 20px;
+    user-select: none;
+}
+
+header span {
+    background: var(--white);
+    display: block;
+    height: 5px;
+    position: relative;
+    width: 30px;
+}
+
+header span::before, header span::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background: var(--white);
+}
+
+header nav label span::before {
+    top: 0.75em;
+}
+
+header nav label span::after  {
+    top: -0.75em;
+}
+
+input:checked ~ ul {
+    max-height: 1000px;
 }
 
 #about {
     color: var(--white);
 }
 
+#blocks {
+    background: var(--blue);
+    border-radius: 10px;
+    margin: 15px;
+    color: var(--white);
+    padding: 20px;
+}
+
+#blocks p {
+    padding: 0 10px;
+}
+
 #results {
     background: var(--blue);
     color: var(--white);
+    padding-bottom: 50px;
+}
+
+#results table {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#results tr {
+    background: var(--black);
+}
+
+#results td, #results th {
+    border: var(--charcoal) 1px solid;
+    height: 30px;
+    line-height: 30px;
+}
+
+#results #even {
+    background: var(--charcoal);
 }
 
 footer {
     background: var(--black);
     color: var(--white);
+    padding: 30px;
+}
+
+footer form {
+    display: inline-block;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 20px auto;
+}
+
+label {
+    display: inline-block;
 }
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
