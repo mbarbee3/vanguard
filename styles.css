@@ -375,9 +375,60 @@ h1::before {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px) {
-    #results {
+    header label {
+        display: none;
+    }
+
+    header ul {
+        display: flex;
+        max-height: 50px;
+    }
+
+    #services {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    #services h2, #services div:first-child {
+        grid-column: 1/-1;
+    }
+
+    #blocks {
+        margin: 5px;
+    }
+
+    #results {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+        align-items: start;
+        gap: 10px;
+    }
+
+    #results h2, #results p {
+        grid-column: 1/-1;
+    }
+
+    #results #profits {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #results table {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #results #growth {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #results #bar-chart {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
     .results-container {
         flex-direction: row;
         justify-content: space-between;
@@ -392,5 +443,23 @@ h1::before {
 
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
+    #services {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
+    footer form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 40px;
+    }
+
+    footer form div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer form button {
+        margin-top: 30px;
+        height: 50px;
+    }
 }
