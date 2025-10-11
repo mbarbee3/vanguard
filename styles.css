@@ -201,12 +201,17 @@ input:checked ~ ul {
     border-radius: 10px;
 }
 
+#about a:hover {
+    background: var(--red);
+}
+
 #blocks {
     background: var(--blue);
     border-radius: 10px;
     margin: 15px;
     color: var(--white);
     padding: 20px;
+    transition: all 0.5s ease;
 }
 
 #blocks h3{
@@ -215,6 +220,10 @@ input:checked ~ ul {
 
 #blocks p {
     padding: 0 10px;
+}
+
+#blocks:hover {
+    transform: translate(0, -5px);
 }
 
 #results {
@@ -293,6 +302,10 @@ footer button {
     border-radius: 10px;
 }
 
+footer button:hover {
+    background: var(--red);
+}
+
 #trademark p {
     text-align: center;
     margin: 5px;
@@ -325,6 +338,19 @@ h1::before {
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
     vertical-align: middle;
+    animation: bounce 3s linear infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0, -3px);
+    }
+    50% {
+        transform: translate(0, 3px);
+    }
+    100% {
+        transform: translate(0, -3px);
+    }
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
